@@ -8,3 +8,4 @@
 ./dut.sv
 ./my_driver.sv
 ./top_tb.sv
+./my_if.sv
