@@ -1,12 +1,13 @@
-`timescale 1ns/1ps
+//`timescale 1ns/1ps
 `include "uvm_macros.svh"
 
-import uvm_pkg::*;
-`include "my_if.sv"
-`include "my_transaction.sv"
-`include "my_driver.sv"
+
+//`include "my_if.sv"
+//`include "my_transaction.sv"
+//`include "my_driver.sv"
 
 module top_tb;
+import uvm_pkg::*;
 
 reg clk;
 reg rst_n;
