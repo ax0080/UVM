@@ -33,6 +33,7 @@ task my_driver::main_phase(uvm_phase phase);
    for(int i = 0; i < 2; i++) begin 
       tr = new("tr");
       assert(tr.randomize() with {pload.size == 200;});
+      $display("pload.size = %0d", tr.pload.size);
       drive_one_pkt(tr);
    end
    repeat(5) @(posedge vif.clk);
