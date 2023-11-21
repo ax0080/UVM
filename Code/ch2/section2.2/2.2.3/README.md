@@ -10,3 +10,4 @@
 
 **`uvm_component_utils`** 宏註冊。除了根據一個字符串創建類的實例外，上述代碼中另外一個神奇的地方是 **`main_phase`** 被自動調用了。在 UVM 驗證平台中，只要一個類使用  註冊且此類被實例化了，那麼這個類的**`main_phase`** 就會自動被調用。這也就是為什麼會強調實現一個 driver 等於實現其 。所以，在 driver 中，最重要的就是實現 。上面的例子中，只輸出到“ is called”。令人沮喪的是，根本沒有輸出“**`data is driven`**”，而按照預期，它應該輸出256次。關於這個問題，涉及到 UVM 的 objection 機制。
 
+UVM中透過objection機制來控制驗證平台的關閉。在每個phase中，UVM會檢查是否有objection被提起（raise_objection），如果有，那麼等待這個objection被撤銷（drop_objection）後停止仿真；如果沒有，則馬上結束當前phase。raise_objection語句必須在main_phase中第一個消耗仿真時間的語句之前。像$display語句是不消耗仿真時間的，這些語句可以放在raise_objection之前，但是類似@（posedge top.clk）等語句是要消耗仿真時間的。
