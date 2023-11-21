@@ -1,5 +1,9 @@
 `ifndef MY_MONITOR__SV
 `define MY_MONITOR__SV
+
+`include "uvm_macros.svh"
+import uvm_pkg::*;
+
 class my_monitor extends uvm_monitor;
 
    virtual my_if vif;

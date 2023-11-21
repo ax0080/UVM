@@ -1,5 +1,9 @@
 `ifndef MY_DRIVER__SV
 `define MY_DRIVER__SV
+
+`include "uvm_macros.svh"
+import uvm_pkg::*;
+
 class my_driver extends uvm_driver;
 
    virtual my_if vif;

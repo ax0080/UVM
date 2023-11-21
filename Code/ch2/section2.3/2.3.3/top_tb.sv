@@ -1,21 +1,20 @@
-`timescale 1ns/1ps
+//`timescale 1ns/1ps
 `include "uvm_macros.svh"
-
 import uvm_pkg::*;
-`include "my_if.sv"
-`include "my_transaction.sv"
-`include "my_driver.sv"
-`include "my_monitor.sv"
-`include "my_env.sv"
+//`include "my_if.sv"
+//`include "my_transaction.sv"
+//`include "my_driver.sv"
+//`include "my_monitor.sv"
+//`include "my_env.sv"
 
 module top_tb;
 
 reg clk;
 reg rst_n;
-reg[7:0] rxd;
-reg rx_dv;
-wire[7:0] txd;
-wire tx_en;
+//reg[7:0] rxd;
+//reg rx_dv;
+//wire[7:0] txd;
+//wire tx_en;
 
 my_if input_if(clk, rst_n);
 my_if output_if(clk, rst_n);

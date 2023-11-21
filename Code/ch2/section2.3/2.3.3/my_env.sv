@@ -1,11 +1,13 @@
 `ifndef MY_ENV__SV
 `define MY_ENV__SV
 
+`include "uvm_macros.svh"
+import uvm_pkg::*;
+
 class my_env extends uvm_env;
 
    my_driver drv;
    my_monitor i_mon;
-   
    my_monitor o_mon;
 
    function new(string name = "my_env", uvm_component parent);
