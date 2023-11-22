@@ -17,3 +17,5 @@ endfunction
 這個 **`new`** 函數有兩個參數，第一個參數是實例的名字，第二個則是 **`parent`**。由於 **`my_driver`** 在 **`uvm_env`** 中實例化，所以 **`my_driver`** 的父節點（**`parent`**）就是 **`my_env`**。通過 **`parent`** 的形式，UVM 建立起了樹形的組織結構。在這種樹形的組織結構中，由 **`run_test`** 創建的實例是樹根（這裡是 **`my_env`**），並且樹根的名字是固定的，為 **`uvm_test_top`**，這在前文中已經講述過；在樹根之後會生長出枝葉（這裡只有 **`my_driver`**），長出枝葉的過程需要在 **`my_env`** 的 **`build_phase`** 中手動實現。無論是樹根還是樹葉，都必須由 **`uvm_component`** 或者其派生類繼承而來。整棵 UVM 樹的結構如圖所示。
 
 整個驗證平台中存在兩個 **`build_phase`**，一個是 **`my_env`** 的，一個是 **`my_driver`** 的。那麼這兩個 **`build_phase`** 按照何種順序執行呢？在 UVM 的樹形結構中，**`build_phase`** 的執行遵從從樹根到樹葉的順序，即先執行 **`my_env`** 的 **`build_phase`**，再執行 **`my_driver`** 的 **`build_phase`**。當把整棵樹的 **`build_phase`** 都執行完畢後，再執行後面的 **`phase`**。
+
+<img width="788" alt="Env" src="https://github.com/ax0080/UVM/assets/78300584/985d6f76-3bbf-4d9e-85bd-1c8dfd32c38a">
