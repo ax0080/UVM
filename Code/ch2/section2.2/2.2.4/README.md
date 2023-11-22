@@ -20,3 +20,7 @@ build_phase是UVM中的一個內建phase，與 **`main_phase`** 一樣，當UVM�
 在 **`top_tb`** 中通過 **`run_test`** 創建了一個 **`my_driver`** 的實例，那麼這個實例的名字是什麼呢？答案是 **`uvm_test_top`**：UVM 通過 **`run_test`** 語句創建一個名為 **`uvm_test_top`** 的實例。讀者可以通過查看代碼清單2-3中的語句插入 **`my_driver`**（在 **`build_phase`** 或 **`main_phase`** 中）來進行驗證。無論傳遞給 **`run_test`** 的參數是什麼，創建的實例的名字都為 **`uvm_test_top`**。由於 **`set`** 操作的目標是 **`my_driver`**，所以 **`set`** 函數的第二個參數就是 **`uvm_test_top`**。**`set`** 函數的第一個參數 **`null`** 以及 **`get`** 函數的第一和第二個參數可以暫時放在一邊，後文會詳細說明。
 
 **`set`** 函數與 **`get`** 函數讓人疑惑的另外一點是其古怪的寫法。使用雙冒號是因為這兩個函數都是靜態函數，而 **`uvm_config_db#（virtual my_if）`** 則是一個參數化的類別，其參數就是要寄信的類型，這裡是 **`virtual my_if`**。
+
+
+
+<img width="790" alt="Interface" src="https://github.com/ax0080/UVM/assets/78300584/7672eef5-e000-4fbd-9048-f13dc605030b">
