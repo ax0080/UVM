@@ -1,2 +1,3 @@
 當要實現一個功能時，首先應該想到的是從UVM的某個類別派生出一個新的類別，在這個新的類別中實現所期望的功能。所以，使用UVM的第一條原則是：驗證平台中所有的組件應該派生自UVM中的類別。
 
+<img width="596" alt="Basic Testbench" src="https://github.com/ax0080/UVM/assets/78300584/641f8dd4-692f-467a-848d-f41dfe88e8a0">
