@@ -1,5 +1,9 @@
 `ifndef MY_SCOREBOARD__SV
 `define MY_SCOREBOARD__SV
+
+`include "uvm_macros.svh"
+import uvm_pkg::*;
+
 class my_scoreboard extends uvm_scoreboard;
    my_transaction  expect_queue[$];
    uvm_blocking_get_port #(my_transaction)  exp_port;
