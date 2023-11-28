@@ -1,0 +1,1 @@
+UVM中的sequence機制用於生成刺激，它是UVM中最重要的機制之一。在本書前面的所有例子中，刺激都是在driver中生成的，但是在一個規範化的UVM驗證平臺中，driver只負責驅動transaction，而不負責生成transaction。sequence機制有兩大組成部分，一是sequence，二是sequencer。本節先介紹如何在驗證平臺中加入sequencer。
