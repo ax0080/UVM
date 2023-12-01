@@ -4,4 +4,4 @@
 
 至於 set 的第三個和第四個參數，以及 uvm_config_db#(uvm_object_wrapper) 中為什麼是 uvm_object_wrapper 而不是 uvm_sequence 或其他，純粹是由於 UVM 的規定，用戶在使用時照做即可。
 
-事實上，除了在 my_env 的 build_phase 中設置 default_sequence 外，還可以在其他地方設置，比如在 top_tb
+事實上，除了在 my_env 的 build_phase 中設置 default_sequence 外，還可以在其他地方設置，比如在 top_tb。
