@@ -3,7 +3,7 @@
 -uvm
 -disable_sem2009
 -timescale 1ns/10ps
-+UVM_TESTNAME=my_case0
+//+UVM_TESTNAME=my_case0
 +UVM_NO_RELNOTES
 //+sv_lib=/home/tools/uvm/uvm-1.2/src/uvm_macros.svh
 +incdir+/home/tools/uvm/uvm-1.2/src/uvm_macros.svh
