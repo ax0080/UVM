@@ -1,8 +1,5 @@
-//`timescale 1ns/1ps
-`include "uvm_macros.svh"
 
-import uvm_pkg::*;
-//`include "my_driver.sv"
+`include "my_driver.sv"
 
 module top_tb;
 
